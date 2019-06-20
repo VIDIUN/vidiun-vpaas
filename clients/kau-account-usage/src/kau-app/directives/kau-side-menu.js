@@ -2,7 +2,7 @@
 
 module.exports = function()
 {
-    function Controller(kauReportsConfiguration)
+    function Controller(vauReportsConfiguration)
     {
         var self = this;
 
@@ -10,7 +10,7 @@ module.exports = function()
         function initialize()
         {
             var menus = [];
-            _.chain(kauReportsConfiguration).sortBy(function(item) {
+            _.chain(vauReportsConfiguration).sortBy(function(item) {
                 return _.at(item,'menu.order') || 100;
             }).forEach(function(item)
             {

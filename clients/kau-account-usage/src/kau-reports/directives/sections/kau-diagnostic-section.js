@@ -35,9 +35,9 @@ module.exports = function()
     return {
         restrict: 'A',
         scope:{
-            options : '=kOptions'
+            options : '=vOptions'
         },
-        require: ['kauDiagnosticSection','^kauReport'],
+        require: ['vauDiagnosticSection','^vauReport'],
         controllerAs:'vm',
         bindToController : true,
 templateUrl: 'kau-reports/directives/sections/kau-diagnostic-section.html',

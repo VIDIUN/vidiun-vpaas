@@ -4,28 +4,28 @@ var config = {};
 
 
 
-function extractKMC()
+function extractVMC()
 {
     try {
-        var kmc = window.parent.kmc;
-        if (kmc && kmc.vars) {
-            if (kmc.vars.ks) {
-                config.ks = kmc.vars.ks;
+        var vmc = window.parent.vmc;
+        if (vmc && vmc.vars) {
+            if (vmc.vars.vs) {
+                config.vs = vmc.vars.vs;
             }
-            if (kmc.vars.partner_id) {
-                config.pid = kmc.vars.partner_id;
+            if (vmc.vars.partner_id) {
+                config.pid = vmc.vars.partner_id;
             }
-            if (kmc.vars.service_url)
-                config.kalturaAPIUri = kmc.vars.service_url + '/api_v3/index.php';
-            if (kmc.vars.liveanalytics) {
-                if (kmc.vars.liveanalytics.player_id) {
-                    config.live.playerId = kmc.vars.liveanalytics.player_id;
+            if (vmc.vars.service_url)
+                config.vidiunAPIUri = vmc.vars.service_url + '/api_v3/index.php';
+            if (vmc.vars.liveanalytics) {
+                if (vmc.vars.liveanalytics.player_id) {
+                    config.live.playerId = vmc.vars.liveanalytics.player_id;
                 }
-                if (kmc.vars.liveanalytics.map_urls) {
-                    config.live.map_urls = kmc.vars.liveanalytics.map_urls;
+                if (vmc.vars.liveanalytics.map_urls) {
+                    config.live.map_urls = vmc.vars.liveanalytics.map_urls;
                 }
-                if (kmc.vars.liveanalytics.map_zoom_levels) {
-                    var n = parseInt(kmc.vars.liveanalytics.map_zoom_levels);
+                if (vmc.vars.liveanalytics.map_zoom_levels) {
+                    var n = parseInt(vmc.vars.liveanalytics.map_zoom_levels);
                     if (n > 0) {
                         config.live.map_zoom_levels = n;
                     }
@@ -33,11 +33,11 @@ function extractKMC()
             }
         }
     } catch (e) {
-        console.log('Could not locate parent.kmc: ' + e);
+        console.log('Could not locate parent.vmc: ' + e);
     }
 }
 
-extractKMC();
+extractVMC();
 
 
 

@@ -9,7 +9,7 @@
         <tbody>
         <tr ng-repeat="item in vm.reportData | orderBy : vm.reportOptions.order" ng-class="{odd:$index%2==1, even:$index%2==0}">
             <td ng-repeat="field in vm.tableColumns">
-                {{ item[field.name] | kauDynamicFilter:field.type : field.valueFormat : field.conversion}}
+                {{ item[field.name] | vauDynamicFilter:field.type : field.valueFormat : field.conversion}}
             </td>
         </tr>
         </tbody>

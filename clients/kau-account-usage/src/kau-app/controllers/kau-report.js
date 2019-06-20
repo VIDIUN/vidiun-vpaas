@@ -1,6 +1,6 @@
 "use strict";
 
-module.exports = function($stateParams, kAppConfig, kaAppRoutingUtils)
+module.exports = function($stateParams, vAppConfig, vaAppRoutingUtils)
 {
 
     var self = this;
@@ -9,7 +9,7 @@ module.exports = function($stateParams, kAppConfig, kaAppRoutingUtils)
     {
         if (!self.reportId)
         {
-            kaAppRoutingUtils.goToDefault();
+            vaAppRoutingUtils.goToDefault();
         }
     }
 

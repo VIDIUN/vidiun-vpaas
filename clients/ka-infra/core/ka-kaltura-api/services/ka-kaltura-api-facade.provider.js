@@ -1,11 +1,11 @@
 "use strict";
 
-function KalturaAPIFacade($q, kalturaAPIContext, $injector) {
+function VidiunAPIFacade($q, vidiunAPIContext, $injector) {
     var self = this;
 
     function invoke(service, action, requestParams) {
 
-        var handler = kalturaAPIContext.getHandler({service : service, action:action});
+        var handler = vidiunAPIContext.getHandler({service : service, action:action});
 
         if (handler) {
             return $injector.instantiate(handler).handleRequest(requestParams);
@@ -15,19 +15,19 @@ function KalturaAPIFacade($q, kalturaAPIContext, $injector) {
     };
 
 
-    function getKalturaAPIService()
+    function getVidiunAPIService()
     {
-        return kalturaAPIContext.getInfo().kalturaApiUri;
+        return vidiunAPIContext.getInfo().vidiunApiUri;
     }
 
-    function getPartnerKS()
+    function getPartnerVS()
     {
-        return kalturaAPIContext.getInfo().partnerKS;
+        return vidiunAPIContext.getInfo().partnerVS;
     }
 
 
-    self.getPartnerKS = getPartnerKS;
-    self.getKalturaAPIService = getKalturaAPIService;
+    self.getPartnerVS = getPartnerVS;
+    self.getVidiunAPIService = getVidiunAPIService;
     self.invoke = invoke;
 };
 
@@ -35,13 +35,13 @@ function KalturaAPIFacade($q, kalturaAPIContext, $injector) {
 module.exports = function () {
 
     var handlers = {},
-        kalturaAPIContext = {
+        vidiunAPIContext = {
             getHandler: getHandler,
             getInfo : getInfo
         },
         info = {
-            partnerKS : '',
-            kalturaApiUri : ''
+            partnerVS : '',
+            vidiunApiUri : ''
         };
 
 
@@ -64,23 +64,23 @@ module.exports = function () {
         handlers[key] = handler;
     }
 
-    function setKalturaAPIService(serviceUri)
+    function setVidiunAPIService(serviceUri)
     {
-        info.kalturaApiUri = serviceUri;
+        info.vidiunApiUri = serviceUri;
     }
 
-    function setPartnerKS(ks)
+    function setPartnerVS(vs)
     {
-        info.partnerKS = ks;
+        info.partnerVS = vs;
     }
 
-    this.setPartnerKS = setPartnerKS;
-    this.setKalturaAPIService = setKalturaAPIService;
+    this.setPartnerVS = setPartnerVS;
+    this.setVidiunAPIService = setVidiunAPIService;
 
     this.registerHandler = registerHandler;
 
 
     this.$get = function ($injector) {
-        return $injector.instantiate(KalturaAPIFacade, {kalturaAPIContext: kalturaAPIContext});
+        return $injector.instantiate(VidiunAPIFacade, {vidiunAPIContext: vidiunAPIContext});
     }
 }

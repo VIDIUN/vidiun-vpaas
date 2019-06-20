@@ -35,10 +35,10 @@ module.exports = function()
     return {
         restrict: 'A',
         scope:{
-            options : '=kOptions',
-            reportStatus : '=kReportStatus'
+            options : '=vOptions',
+            reportStatus : '=vReportStatus'
         },
-        require: ['kauStatusSection','^kauReport'],
+        require: ['vauStatusSection','^vauReport'],
         controllerAs:'vm',
         bindToController : true,
 templateUrl: 'kau-reports/directives/sections/kau-status-section.html',

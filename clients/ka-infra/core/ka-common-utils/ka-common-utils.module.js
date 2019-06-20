@@ -1,3 +1,3 @@
 ﻿'use strict';
 
-module.exports = angular.module('kaCommonUtils',[]);
+module.exports = angular.module('vaCommonUtils',[]);

@@ -7,9 +7,9 @@ $(document).ready(function () {
 
     $.get('./app-config.json',function(data)
     {
-        angular.module('kauApp').constant('kAppConfig',data);
+        angular.module('vauApp').constant('vAppConfig',data);
 
-        angular.bootstrap($html, ['kauApp']);
+        angular.bootstrap($html, ['vauApp']);
 
     });
 

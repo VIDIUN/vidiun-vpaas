@@ -1,12 +1,12 @@
 "use strict";
 
-module.exports = function($state, kAppConfig)
+module.exports = function($state, vAppConfig)
 {
     var self = this;
 
     function goToDefault()
     {
-        $state.go(kAppConfig.routing.defaultState);
+        $state.go(vAppConfig.routing.defaultState);
     }
 
     function openExternalUri(uri)

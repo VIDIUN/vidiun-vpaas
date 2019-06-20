@@ -1,21 +1,21 @@
-describe('[ka-kmc-hoster] ka-kmc-config service',function()
+describe('[ka-vmc-hoster] ka-vmc-config service',function()
 {
     beforeEach(function()
     {
-        module('ka-kmc-hoster');
+        module('ka-vmc-hoster');
 
-        window.kmc = {
+        window.vmc = {
           vars :{
-              ks : 'sss'
+              vs : 'sss'
           }
         };
     });
 
-    it('should read ks from parent kmc hoster',function()
+    it('should read vs from parent vmc hoster',function()
     {
-        inject(function(kaKMCConfig)
+        inject(function(vaVMCConfig)
         {
-            expect(kaKMCConfig.ks).toBeDefined();
+            expect(vaVMCConfig.vs).toBeDefined();
         });
 
     });

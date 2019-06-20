@@ -1,7 +1,7 @@
 ﻿'use strict';
 
 require('../ka-common-utils');
-require('../ka-kmc-hoster');
+require('../ka-vmc-hoster');
 
 
-module.exports = angular.module('kaKalturaAPI',['kaCommonUtils','kaKMCHoster']);
+module.exports = angular.module('vaVidiunAPI',['vaCommonUtils','vaVMCHoster']);

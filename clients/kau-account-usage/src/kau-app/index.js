@@ -6,10 +6,10 @@ var appModule = require('./kau-app.module.js');
 appModule.config(require('./kau-app.config.js'));
 appModule.run(require('./kau-app.run.js'));
 
-appModule.controller('kauReport',require('./controllers/kau-report'));
+appModule.controller('vauReport',require('./controllers/kau-report'));
 
-appModule.constant('kauReportsConfiguration',require('./services/kau-reports-configuration.constant.js'));
+appModule.constant('vauReportsConfiguration',require('./services/kau-reports-configuration.constant.js'));
 
-appModule.directive('kauSideMenu',require('./directives/kau-side-menu'));
+appModule.directive('vauSideMenu',require('./directives/kau-side-menu'));
 
 

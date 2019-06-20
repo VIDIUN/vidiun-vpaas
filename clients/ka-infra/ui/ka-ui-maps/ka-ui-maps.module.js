@@ -1,3 +1,3 @@
 ﻿'use strict';
 
-module.exports = angular.module('kaUIMaps',[]);
+module.exports = angular.module('vaUIMaps',[]);

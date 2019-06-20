@@ -2,7 +2,7 @@
 
 var moment = require('moment');
 
-module.exports = function($q, kaKalturaAPIFacade, kauReportsConfiguration)
+module.exports = function($q, vaVidiunAPIFacade, vauReportsConfiguration)
 {
     var self = this;
     var requireFiltersProperties = ["reportType","date.startDate","date.endDate"];
@@ -14,11 +14,11 @@ module.exports = function($q, kaKalturaAPIFacade, kauReportsConfiguration)
         if (filters && _.every(requireFiltersProperties, _.partial(_.has,filters))) {
             var requestParams = {
                 reportType: filters.reportType,
-                reportTitle : 'kaltura',
+                reportTitle : 'vidiun',
                 reportInputFilter: {fromDay: moment(filters.date.startDate).format('YYYYMMDD'), toDay: moment(filters.date.endDate).format('YYYYMMDD')}
             };
 
-            return kaKalturaAPIFacade.invoke('report','getUrlForReportAsCsv',requestParams);
+            return vaVidiunAPIFacade.invoke('report','getUrlForReportAsCsv',requestParams);
         }else
         {
             return $q.reject({errorMessage: 'get report csv uri was invoked with partial/missing required filters'});
@@ -55,7 +55,7 @@ module.exports = function($q, kaKalturaAPIFacade, kauReportsConfiguration)
             }else {
                 cachedReportsData[cacheKey] = null;
 
-                kaKalturaAPIFacade.invoke('report', 'getTable', requestParams).then(function (result) {
+                vaVidiunAPIFacade.invoke('report', 'getTable', requestParams).then(function (result) {
                     var cachedResponseItem = {response : result, expirationDate : moment().add(1,'h')};
                     console.log('added response to cache (cached data expires ' + cachedResponseItem.expirationDate.fromNow() + ')');
                     cachedReportsData[cacheKey] = cachedResponseItem;
@@ -81,7 +81,7 @@ module.exports = function($q, kaKalturaAPIFacade, kauReportsConfiguration)
             return cachedReportsConfiguration;
         }
 
-        cachedReportsConfiguration = _.chain(kauReportsConfiguration).value();
+        cachedReportsConfiguration = _.chain(vauReportsConfiguration).value();
 
         return cachedReportsConfiguration;
     }

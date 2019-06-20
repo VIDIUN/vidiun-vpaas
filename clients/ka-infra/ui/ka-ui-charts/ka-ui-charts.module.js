@@ -1,3 +1,3 @@
 ﻿'use strict';
 
-module.exports = angular.module('kaUICharts',[]);
+module.exports = angular.module('vaUICharts',[]);

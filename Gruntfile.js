@@ -4,7 +4,7 @@ var _ = require('lodash');
 var defaultEnvName = 'dev';
 var defaultConfigName = 'live';
 var allEnvTaskConfigName = 'all-env';
-var vpaasAppModule = 'kauApp';
+var vpaasAppModule = 'vauApp';
 
 module.exports = function (grunt) {
 

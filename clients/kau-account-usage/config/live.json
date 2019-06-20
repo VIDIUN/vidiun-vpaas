@@ -1,6 +1,6 @@
 {
     "server" : {
-        "apiUri" : "https://www.kaltura.com/api_v3/index.php"
+        "apiUri" : "https://www.vidiun.com/api_v3/index.php"
     },
     "routing": {
         "defaultState" : "root.shell.reports.report({reportId : 'overall'}",

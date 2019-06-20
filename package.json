@@ -1,9 +1,9 @@
 {
-  "name": "kaltura-vpaas",
+  "name": "vidiun-vpaas",
   "version": "2.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kaltura/kaltura-vpaas"
+    "url": "https://github.com/vidiun/vidiun-vpaas"
   },
   "scripts": {
     "build": "grunt build",

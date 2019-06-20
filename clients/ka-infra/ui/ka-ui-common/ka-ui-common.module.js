@@ -1,3 +1,3 @@
 ﻿'use strict';
 
-module.exports = angular.module('kaUICommon',[]);
+module.exports = angular.module('vaUICommon',[]);

@@ -1,5 +1,5 @@
 module.exports = function () {
-    function Controller($scope, SessionInfo, $timeout, kaCountriesGeojson) {
+    function Controller($scope, SessionInfo, $timeout, vaCountriesGeojson) {
         var self = this;
 
 
@@ -54,7 +54,7 @@ module.exports = function () {
 
             var index = 0;
             _.each(data, function (item) {
-                var geojson = kaCountriesGeojson[item.text.toLowerCase()];
+                var geojson = vaCountriesGeojson[item.text.toLowerCase()];
 
                 if (geojson) {
                     var newGeojson = $.extend(true, {}, geojson);
@@ -124,7 +124,7 @@ module.exports = function () {
                 osm: {
                     name: 'OpenStreetMap',
                     type: 'xyz',
-                    url: 'https://{s}.kaltura.com/content/static/maps/v1/{z}/{x}/{y}.png',
+                    url: 'https://{s}.vidiun.com/content/static/maps/v1/{z}/{x}/{y}.png',
                     layerOptions: {
                         subdomains: ['cf1', 'cf2', 'cf3'],
                         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
@@ -188,10 +188,10 @@ module.exports = function () {
     return {
         restrict: 'A',
         scope: {
-            options: '=kOptions',
-            rebind: '=kRebind'
+            options: '=vOptions',
+            rebind: '=vRebind'
         },
-        templateUrl: 'ks-infra/ui/ka-ui-maps/directives/ka-map.html',
+        templateUrl: 'vs-infra/ui/ka-ui-maps/directives/ka-map.html',
         controller: Controller,
         controllerAs: 'vm',
         bindToController: true,

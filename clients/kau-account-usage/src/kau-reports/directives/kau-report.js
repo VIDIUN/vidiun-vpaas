@@ -3,7 +3,7 @@
 
 module.exports = function()
 {
-    function controller(kauReportsData, $timeout)
+    function controller(vauReportsData, $timeout)
     {
         var self = this;
         var sections = [];
@@ -54,7 +54,7 @@ module.exports = function()
                 }
             });
 
-            kauReportsData.getReportData(filters).then(function (result) {
+            vauReportsData.getReportData(filters).then(function (result) {
 
                 self.reportData = result.data;
                 self.reportStatus.hasData = true;
@@ -113,8 +113,8 @@ module.exports = function()
 
         function buildReport(reportId)
         {
-            var kauReportsConfiguration = kauReportsData.getReportsConfiguration();
-            var reportConfig = _.find(kauReportsConfiguration,{reportId : reportId});
+            var vauReportsConfiguration = vauReportsData.getReportsConfiguration();
+            var reportConfig = _.find(vauReportsConfiguration,{reportId : reportId});
 
             if (reportConfig && _.every(requiredReportConfigParameters, _.partial(_.has, reportConfig)))
             {
@@ -154,7 +154,7 @@ module.exports = function()
 
     function link(scope,element,attrs,ctrl)
     {
-        ctrl.buildReport(attrs.kauReport);
+        ctrl.buildReport(attrs.vauReport);
 
     }
 

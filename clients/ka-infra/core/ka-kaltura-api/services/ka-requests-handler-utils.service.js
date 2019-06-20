@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function ($http, $q,  $httpParamSerializer, kaKalturaAPIFacade) {
+module.exports = function ($http, $q,  $httpParamSerializer, vaVidiunAPIFacade) {
     var self = this;
     var isIE = (!!window.ActiveXObject && +(/msie\s(\d+)/i.exec(navigator.userAgent)[1])) || NaN;
 
@@ -46,7 +46,7 @@ module.exports = function ($http, $q,  $httpParamSerializer, kaKalturaAPIFacade)
         if (isIE < 10) {
             method = 'jsonp';
             parsedRequestParams = $.extend(true, {}, requestParams, {
-                ks: kaKalturaAPIFacade.getPartnerKS(),
+                vs: vaVidiunAPIFacade.getPartnerVS(),
                 'callback': 'JSON_CALLBACK',
                 'format': '9'
             });
@@ -54,12 +54,12 @@ module.exports = function ($http, $q,  $httpParamSerializer, kaKalturaAPIFacade)
         else {
             method = "post";
             parsedRequestParams = $.extend(true, {}, requestParams, {
-                ks: kaKalturaAPIFacade.getPartnerKS(),
+                vs: vaVidiunAPIFacade.getPartnerVS(),
                 'format': '1'
             });
         }
 
-        var url = kaKalturaAPIFacade.getKalturaAPIService();
+        var url = vaVidiunAPIFacade.getVidiunAPIService();
         if (queryParams)
         {
             url += '?' + $httpParamSerializer(queryParams);
@@ -73,10 +73,10 @@ module.exports = function ($http, $q,  $httpParamSerializer, kaKalturaAPIFacade)
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
         }).then(function (response, status) {
             var data = response.data;
-            if (data.objectType === "KalturaAPIException") {
-                if (data.code === "INVALID_KS") {
+            if (data.objectType === "VidiunAPIException") {
+                if (data.code === "INVALID_VS") {
                     // TODO
-                    deferred.reject({error: 'invalid-ks', errorMessage: 'Invalid partner KS'});
+                    deferred.reject({error: 'invalid-vs', errorMessage: 'Invalid partner VS'});
                 }
                 else {
                     var errorMessage = data.message || 'Failed to invoke request';

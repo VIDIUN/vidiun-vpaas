@@ -1,8 +1,8 @@
 'use strict';
 
-module.exports = function ($rootScope,$state,kAppConfig) {
+module.exports = function ($rootScope,$state,vAppConfig) {
 
     $rootScope.$state = $state;
 
-    $rootScope.kAppConfig = kAppConfig;
+    $rootScope.vAppConfig = vAppConfig;
 };

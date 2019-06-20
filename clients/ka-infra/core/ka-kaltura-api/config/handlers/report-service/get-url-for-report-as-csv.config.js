@@ -1,10 +1,10 @@
 "use strict";
 
-module.exports = function(kaKalturaAPIFacadeProvider)
+module.exports = function(vaVidiunAPIFacadeProvider)
 {
     var handlerInfo = {service: 'report', action: 'getUrlForReportAsCsv'};
 
-    function RequestHandler($q, kaRequestsHandlerUtils) {
+    function RequestHandler($q, vaRequestsHandlerUtils) {
         var self = this;
 
         var defaultRequestData = {
@@ -37,7 +37,7 @@ module.exports = function(kaKalturaAPIFacadeProvider)
             {
                 var parsedRequestData = prepareRequestData(requestParams);
 
-                kaRequestsHandlerUtils.invokeAPIRequest(parsedRequestData,handlerInfo).then(function(result)
+                vaRequestsHandlerUtils.invokeAPIRequest(parsedRequestData,handlerInfo).then(function(result)
                 {
                     deferred.resolve({csvUri : result.data});
                 },function(reason)
@@ -47,7 +47,7 @@ module.exports = function(kaKalturaAPIFacadeProvider)
 
             }else
             {
-                deferred.reject({error: 'k-api-request-data-invalid'});
+                deferred.reject({error: 'v-api-request-data-invalid'});
             }
 
             return deferred.promise;
@@ -59,6 +59,6 @@ module.exports = function(kaKalturaAPIFacadeProvider)
         self.prepareRequestData = prepareRequestData;
     }
 
-    kaKalturaAPIFacadeProvider.registerHandler(handlerInfo,RequestHandler);
+    vaVidiunAPIFacadeProvider.registerHandler(handlerInfo,RequestHandler);
 };
 

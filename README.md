@@ -1,7 +1,7 @@
-# Kaltura Usage Dashboard (VPaas) 
+# Vidiun Usage Dashboard (VPaas) 
 
 
-learn more [here](https://vpaas.kaltura.com/)
+learn more [here](https://vpaas.vidiun.com/)
 
 ## Getting Started
 
@@ -52,10 +52,10 @@ If you get any errors during the process just follow the [FAQ](##faq) section.
 
 ### Run the application as standalone
 
-You will need to provide a valid KS. you can provide it by passing a query string named 'ks' with a valid value. Note that we use in this application the # notion in the url so you will need to add the query string **before this notation**, for example:
+You will need to provide a valid VS. you can provide it by passing a query string named 'vs' with a valid value. Note that we use in this application the # notion in the url so you will need to add the query string **before this notation**, for example:
 
 ```
-http://localhost:9003/index.html?ks=the_ks_value
+http://localhost:9003/index.html?vs=the_vs_value
 ```
 
 
@@ -80,8 +80,8 @@ $ grunt serve:prod
 
 ## Developer information
 
-## Extending Kaltura API request for service 'report' action 'getTable'
-Each API call has a handler that manages it. The handler of `report/getTable` path is `clients/ka-infra/core/ka-kaltura-api/config/handlers/report-service/get-table.config.js`. When adding/renaming report fields you should update `responseDescriptor` variable with a mapping between the expected field and its type.
+## Extending Vidiun API request for service 'report' action 'getTable'
+Each API call has a handler that manages it. The handler of `report/getTable` path is `clients/ka-infra/core/ka-vidiun-api/config/handlers/report-service/get-table.config.js`. When adding/renaming report fields you should update `responseDescriptor` variable with a mapping between the expected field and its type.
 
 ## Creating or modifying reports
 To extend the reports you should modify file `clients/kau-account-usage/src/kau-app/services/kau-reports-configuration.constant.js`
@@ -99,5 +99,5 @@ That being said, you can use the _--force_ flag to temoprary force the process t
 # License and Copyright Information
 All code in this project is released under the [AGPLv3 license](http://www.gnu.org/licenses/agpl-3.0.html) unless a different license for a particular library is specified in the applicable library path.   
 
-Copyright © Kaltura Inc. All rights reserved.   
-Authors and contributors: See [GitHub contributors list](https://github.com/kaltura/kaltura-vpaas/graphs/contributors).  
+Copyright © Vidiun Inc. All rights reserved.   
+Authors and contributors: See [GitHub contributors list](https://github.com/vidiun/vidiun-vpaas/graphs/contributors).  

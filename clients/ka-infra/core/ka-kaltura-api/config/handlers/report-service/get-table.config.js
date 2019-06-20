@@ -1,11 +1,11 @@
 "use strict";
 var moment = require('moment');
 
-module.exports = function(kaKalturaAPIFacadeProvider)
+module.exports = function(vaVidiunAPIFacadeProvider)
 {
     var handlerInfo = {service: 'report', action: 'getTable'};
 
-    function RequestHandler($q, kaRequestsHandlerUtils, kFormatterUtils) {
+    function RequestHandler($q, vaRequestsHandlerUtils, vFormatterUtils) {
         var self = this;
 
         var responseDescriptor = {
@@ -49,7 +49,7 @@ module.exports = function(kaKalturaAPIFacadeProvider)
             {
                 var parsedRequestData = prepareRequestData(requestParams);
 
-                kaRequestsHandlerUtils.invokeAPIRequest(parsedRequestData,handlerInfo).then(function(result)
+                vaRequestsHandlerUtils.invokeAPIRequest(parsedRequestData,handlerInfo).then(function(result)
                 {
                     // convert header/data properties into object { header : data_value }
                     var headers = _.words(result.data.header, /[^,]+/g);
@@ -66,7 +66,7 @@ module.exports = function(kaKalturaAPIFacadeProvider)
                                 var descriptorToken = fieldDescriptor.split(',');
                                 var type = descriptorToken[1];
                                 var format = descriptorToken.length >= 3 ? descriptorToken[2] : null;
-                                obj[key] = kFormatterUtils.parseByType(value, type, format);
+                                obj[key] = vFormatterUtils.parseByType(value, type, format);
                             }
                         });
 
@@ -82,7 +82,7 @@ module.exports = function(kaKalturaAPIFacadeProvider)
 
             }else
             {
-                deferred.reject({error: 'k-api-request-data-invalid'});
+                deferred.reject({error: 'v-api-request-data-invalid'});
             }
 
             return deferred.promise;
@@ -94,5 +94,5 @@ module.exports = function(kaKalturaAPIFacadeProvider)
         self.prepareRequestData = prepareRequestData;
     }
 
-    kaKalturaAPIFacadeProvider.registerHandler(handlerInfo,RequestHandler);
+    vaVidiunAPIFacadeProvider.registerHandler(handlerInfo,RequestHandler);
 };

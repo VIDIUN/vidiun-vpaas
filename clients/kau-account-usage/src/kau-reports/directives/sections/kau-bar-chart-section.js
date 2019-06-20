@@ -3,7 +3,7 @@
 
 module.exports = function()
 {
-    function Controller($scope,kFormatterUtils,$timeout)
+    function Controller($scope,vFormatterUtils,$timeout)
     {
         var self = this;
         var defaultOptions = {
@@ -96,7 +96,7 @@ module.exports = function()
                         tickFormat: function (d) {
                             if (self.reportOptions.xValue.labelFormat)
                             {
-                                return kFormatterUtils.formatByType(d,self.reportOptions.xValue.type,self.reportOptions.xValue.labelFormat);
+                                return vFormatterUtils.formatByType(d,self.reportOptions.xValue.type,self.reportOptions.xValue.labelFormat);
                             }
                             return d;
                         }
@@ -108,7 +108,7 @@ module.exports = function()
                                 ? self.reportOptions.yValue.find(value => self.dataKeys.indexOf(value.name) !== -1)
                                 : self.reportOptions.yValue;
                             if (yValue && yValue.labelFormat) {
-                                return kFormatterUtils.formatByType(d,yValue.type, yValue.labelFormat, yValue.conversion);
+                                return vFormatterUtils.formatByType(d,yValue.type, yValue.labelFormat, yValue.conversion);
                             }
                             return d;
                         },
@@ -145,10 +145,10 @@ module.exports = function()
     return {
         restrict: 'A',
         scope:{
-            options : '=kOptions',
-            reportStatus : '=kReportStatus'
+            options : '=vOptions',
+            reportStatus : '=vReportStatus'
         },
-        require: ['kauBarChartSection','^kauReport'],
+        require: ['vauBarChartSection','^vauReport'],
         controllerAs:'vm',
         bindToController : true,
 templateUrl: 'kau-reports/directives/sections/kau-bar-chart-section.html',

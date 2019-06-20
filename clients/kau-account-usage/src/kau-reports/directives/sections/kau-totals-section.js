@@ -3,7 +3,7 @@
 
 module.exports = function()
 {
-    function Controller($scope, kauReportsData,$window)
+    function Controller($scope, vauReportsData,$window)
     {
         var self = this;
 
@@ -43,10 +43,10 @@ module.exports = function()
     return {
         restrict: 'A',
         scope:{
-            reportOptions : '=kOptions',
-            reportStatus : '=kReportStatus'
+            reportOptions : '=vOptions',
+            reportStatus : '=vReportStatus'
         },
-        require: ['kauTotalsSection','^kauReport'],
+        require: ['vauTotalsSection','^vauReport'],
         controllerAs:'vm',
         bindToController : true,
 templateUrl: 'kau-reports/directives/sections/kau-totals-section.html',

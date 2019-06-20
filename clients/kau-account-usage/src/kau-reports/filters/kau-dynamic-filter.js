@@ -1,10 +1,10 @@
 "use strict";
 
-module.exports = function(kFormatterUtils)
+module.exports = function(vFormatterUtils)
 {
     return function(input, type, format, conversion)
     {
-       return kFormatterUtils.formatByType(input,type,format, conversion);
+       return vFormatterUtils.formatByType(input,type,format, conversion);
     }
 };
 

@@ -6,25 +6,25 @@ appModule.run(require('./kau-reports.run'));
 
 
 
-appModule.service('kauReportsData',require('./services/kau-reports-data.service'));
+appModule.service('vauReportsData',require('./services/kau-reports-data.service'));
 
 
-appModule.directive('kauReport',require('./directives/kau-report'));
+appModule.directive('vauReport',require('./directives/kau-report'));
 
-appModule.directive('kauFiltersSection',require('./directives/sections/kau-filters-section'));
-appModule.directive('kauBarChartSection',require('./directives/sections/kau-bar-chart-section'));
-appModule.directive('kauTableSection',require('./directives/sections/kau-table-section'));
-appModule.directive('kauTotalsSection',require('./directives/sections/kau-totals-section'));
-appModule.directive('kauDiagnosticSection',require('./directives/sections/kau-diagnostic-section'));
-appModule.directive('kauStatusSection',require('./directives/sections/kau-status-section'));
+appModule.directive('vauFiltersSection',require('./directives/sections/kau-filters-section'));
+appModule.directive('vauBarChartSection',require('./directives/sections/kau-bar-chart-section'));
+appModule.directive('vauTableSection',require('./directives/sections/kau-table-section'));
+appModule.directive('vauTotalsSection',require('./directives/sections/kau-totals-section'));
+appModule.directive('vauDiagnosticSection',require('./directives/sections/kau-diagnostic-section'));
+appModule.directive('vauStatusSection',require('./directives/sections/kau-status-section'));
 
-appModule.filter('kauDynamicFilter',require('./filters/kau-dynamic-filter'));
+appModule.filter('vauDynamicFilter',require('./filters/kau-dynamic-filter'));
 
 // todo: move to core ui module
 
 var moment = require('moment');
 
-appModule.filter('kDate',function()
+appModule.filter('vDate',function()
 {
     return function(value)
     {

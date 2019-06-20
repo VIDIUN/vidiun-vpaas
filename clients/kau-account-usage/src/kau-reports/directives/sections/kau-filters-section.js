@@ -4,7 +4,7 @@ var moment = require('moment');
 
 module.exports = function()
 {
-    function Controller($scope,kaAppRoutingUtils,  kauReportsData,$element,$timeout)
+    function Controller($scope,vaAppRoutingUtils,  vauReportsData,$element,$timeout)
     {
         var self = this;
 
@@ -18,7 +18,7 @@ module.exports = function()
 
             self.csvProcessing = true;
             self.reportStatus.errorMessage = '';
-            kauReportsData.getReportCSVUri(requestParams).then(function (result) {
+            vauReportsData.getReportCSVUri(requestParams).then(function (result) {
 
                 if (self.csvProcessing) {
                     // if csvProcessing is off it means this response is not longer needed (user might performed a report query)
@@ -137,10 +137,10 @@ module.exports = function()
     return {
         restrict: 'A',
         scope:{
-            reportOptions : '=kOptions',
-            reportStatus : '=kReportStatus'
+            reportOptions : '=vOptions',
+            reportStatus : '=vReportStatus'
         },
-        require: ['kauFiltersSection','^kauReport'],
+        require: ['vauFiltersSection','^vauReport'],
         controllerAs:'vm',
         bindToController : true,
 templateUrl: 'kau-reports/directives/sections/kau-filters-section.html',
