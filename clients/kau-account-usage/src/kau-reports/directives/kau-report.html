@@ -1,7 +1,7 @@
-<div class="row" ka-status-notification-container>
+<div class="row" va-status-notification-container>
     <div class="col-xs-12">
         <div data-ng-repeat="section in vm.reportConfig.sections" >
-            <div class="row ka-report-section">
+            <div class="row va-report-section">
                 <div class="col-xs-12">
                     <div data-ng-if="section.type === 'filters'" v-report-status="vm.reportStatus"  v-options="section.options" data-vau-filters-section></div>
                     <div data-ng-if="section.type === 'barChart'" v-report-status="vm.reportStatus" v-options="section.options" data-vau-bar-chart-section></div>

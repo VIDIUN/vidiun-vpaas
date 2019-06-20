@@ -19,7 +19,7 @@ module.exports = function (grunt) {
         project: {
             // Configurable paths
             app: 'clients/vau-account-usage',
-            infra: 'clients/ka-infra',
+            infra: 'clients/va-infra',
             config: '<%= project.app %>/config',
             assets: '<%= project.app %>/assets',
             dist: 'dist',

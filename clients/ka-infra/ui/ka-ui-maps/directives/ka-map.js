@@ -191,7 +191,7 @@ module.exports = function () {
             options: '=vOptions',
             rebind: '=vRebind'
         },
-        templateUrl: 'vs-infra/ui/ka-ui-maps/directives/ka-map.html',
+        templateUrl: 'vs-infra/ui/va-ui-maps/directives/va-map.html',
         controller: Controller,
         controllerAs: 'vm',
         bindToController: true,

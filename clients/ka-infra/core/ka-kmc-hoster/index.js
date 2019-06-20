@@ -1,9 +1,9 @@
 'use strict';
 
 
-var appModule = require('./ka-vmc-hoster.module.js');
-appModule.run(require('./ka-vmc-hoster.run.js'));
-appModule.config(require('./ka-vmc-hoster.config.js'));
+var appModule = require('./va-vmc-hoster.module.js');
+appModule.run(require('./va-vmc-hoster.run.js'));
+appModule.config(require('./va-vmc-hoster.config.js'));
 
-appModule.constant('vaVMCConfig',require('./services/ka-vmc-config.constant'));
+appModule.constant('vaVMCConfig',require('./services/va-vmc-config.constant'));
 

@@ -1,8 +1,8 @@
 'use strict';
 
 
-var appModule = require('./ka-ui-common.module.js');
-appModule.run(require('./ka-ui-common.run.js'));
-appModule.config(require('./ka-ui-common.config.js'));
+var appModule = require('./va-ui-common.module.js');
+appModule.run(require('./va-ui-common.run.js'));
+appModule.config(require('./va-ui-common.config.js'));
 
-appModule.directive('vaStatusNotification',require('./directives/ka-status-notification'));
+appModule.directive('vaStatusNotification',require('./directives/va-status-notification'));

@@ -1,8 +1,8 @@
-describe('[ka-vmc-hoster] ka-vmc-config service',function()
+describe('[va-vmc-hoster] va-vmc-config service',function()
 {
     beforeEach(function()
     {
-        module('ka-vmc-hoster');
+        module('va-vmc-hoster');
 
         window.vmc = {
           vars :{

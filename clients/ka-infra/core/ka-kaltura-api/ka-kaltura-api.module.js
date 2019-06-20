@@ -1,7 +1,7 @@
 ﻿'use strict';
 
-require('../ka-common-utils');
-require('../ka-vmc-hoster');
+require('../va-common-utils');
+require('../va-vmc-hoster');
 
 
 module.exports = angular.module('vaVidiunAPI',['vaCommonUtils','vaVMCHoster']);
