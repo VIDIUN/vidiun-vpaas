@@ -1,6 +1,6 @@
-$kan-active-color: #31708f;
-$kan-active-background-color: #d9edf7;
-$kan-active-border-color: #bce8f1;
+$van-active-color: #31708f;
+$van-active-background-color: #d9edf7;
+$van-active-border-color: #bce8f1;
 
 $active-background : #f5f5f5 !important;
 $active-color : #555 !important;
@@ -16,8 +16,8 @@ $active-color-2 : #563d7c;
 }
 
 @mixin active(){
-    background: $kan-active-background-color;
-    color: $kan-active-color;
+    background: $van-active-background-color;
+    color: $van-active-color;
 }
 
 .bl

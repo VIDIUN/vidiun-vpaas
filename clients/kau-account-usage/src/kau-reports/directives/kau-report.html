@@ -3,12 +3,12 @@
         <div data-ng-repeat="section in vm.reportConfig.sections" >
             <div class="row ka-report-section">
                 <div class="col-xs-12">
-                    <div data-ng-if="section.type === 'filters'" v-report-status="vm.reportStatus"  v-options="section.options" data-kau-filters-section></div>
-                    <div data-ng-if="section.type === 'barChart'" v-report-status="vm.reportStatus" v-options="section.options" data-kau-bar-chart-section></div>
-                    <div data-ng-if="section.type === 'table'" v-report-status="vm.reportStatus" v-options="section.options" data-kau-table-section></div>
-                    <div data-ng-if="section.type === 'totals'" v-report-status="vm.reportStatus" v-options="section.options" data-kau-totals-section></div>
-                    <div data-ng-if="section.type === 'diagnostic'" v-report-status="vm.reportStatus" v-options="section.options" data-kau-diagnostic-section></div>
-                    <div data-ng-if="section.type === 'status'" v-report-status="vm.reportStatus" v-options="section.options" data-kau-status-section></div>
+                    <div data-ng-if="section.type === 'filters'" v-report-status="vm.reportStatus"  v-options="section.options" data-vau-filters-section></div>
+                    <div data-ng-if="section.type === 'barChart'" v-report-status="vm.reportStatus" v-options="section.options" data-vau-bar-chart-section></div>
+                    <div data-ng-if="section.type === 'table'" v-report-status="vm.reportStatus" v-options="section.options" data-vau-table-section></div>
+                    <div data-ng-if="section.type === 'totals'" v-report-status="vm.reportStatus" v-options="section.options" data-vau-totals-section></div>
+                    <div data-ng-if="section.type === 'diagnostic'" v-report-status="vm.reportStatus" v-options="section.options" data-vau-diagnostic-section></div>
+                    <div data-ng-if="section.type === 'status'" v-report-status="vm.reportStatus" v-options="section.options" data-vau-status-section></div>
                 </div>
             </div>
         </div>

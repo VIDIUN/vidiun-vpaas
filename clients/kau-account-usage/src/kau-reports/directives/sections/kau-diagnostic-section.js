@@ -40,7 +40,7 @@ module.exports = function()
         require: ['vauDiagnosticSection','^vauReport'],
         controllerAs:'vm',
         bindToController : true,
-templateUrl: 'kau-reports/directives/sections/kau-diagnostic-section.html',
+templateUrl: 'vau-reports/directives/sections/vau-diagnostic-section.html',
         controller: Controller,
         link:Link
     };

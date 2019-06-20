@@ -143,7 +143,7 @@ module.exports = function()
         require: ['vauFiltersSection','^vauReport'],
         controllerAs:'vm',
         bindToController : true,
-templateUrl: 'kau-reports/directives/sections/kau-filters-section.html',
+templateUrl: 'vau-reports/directives/sections/vau-filters-section.html',
         controller: Controller,
         link:Link
     };

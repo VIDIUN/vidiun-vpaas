@@ -84,7 +84,7 @@ $ grunt serve:prod
 Each API call has a handler that manages it. The handler of `report/getTable` path is `clients/ka-infra/core/ka-vidiun-api/config/handlers/report-service/get-table.config.js`. When adding/renaming report fields you should update `responseDescriptor` variable with a mapping between the expected field and its type.
 
 ## Creating or modifying reports
-To extend the reports you should modify file `clients/kau-account-usage/src/kau-app/services/kau-reports-configuration.constant.js`
+To extend the reports you should modify file `clients/vau-account-usage/src/vau-app/services/vau-reports-configuration.constant.js`
 
 ## FAQ
 

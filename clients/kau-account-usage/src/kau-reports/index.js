@@ -1,24 +1,24 @@
 'use strict';
 
-var appModule = require('./kau-reports.module');
-appModule.config(require('./kau-reports.config'));
-appModule.run(require('./kau-reports.run'));
+var appModule = require('./vau-reports.module');
+appModule.config(require('./vau-reports.config'));
+appModule.run(require('./vau-reports.run'));
 
 
 
-appModule.service('vauReportsData',require('./services/kau-reports-data.service'));
+appModule.service('vauReportsData',require('./services/vau-reports-data.service'));
 
 
-appModule.directive('vauReport',require('./directives/kau-report'));
+appModule.directive('vauReport',require('./directives/vau-report'));
 
-appModule.directive('vauFiltersSection',require('./directives/sections/kau-filters-section'));
-appModule.directive('vauBarChartSection',require('./directives/sections/kau-bar-chart-section'));
-appModule.directive('vauTableSection',require('./directives/sections/kau-table-section'));
-appModule.directive('vauTotalsSection',require('./directives/sections/kau-totals-section'));
-appModule.directive('vauDiagnosticSection',require('./directives/sections/kau-diagnostic-section'));
-appModule.directive('vauStatusSection',require('./directives/sections/kau-status-section'));
+appModule.directive('vauFiltersSection',require('./directives/sections/vau-filters-section'));
+appModule.directive('vauBarChartSection',require('./directives/sections/vau-bar-chart-section'));
+appModule.directive('vauTableSection',require('./directives/sections/vau-table-section'));
+appModule.directive('vauTotalsSection',require('./directives/sections/vau-totals-section'));
+appModule.directive('vauDiagnosticSection',require('./directives/sections/vau-diagnostic-section'));
+appModule.directive('vauStatusSection',require('./directives/sections/vau-status-section'));
 
-appModule.filter('vauDynamicFilter',require('./filters/kau-dynamic-filter'));
+appModule.filter('vauDynamicFilter',require('./filters/vau-dynamic-filter'));
 
 // todo: move to core ui module
 

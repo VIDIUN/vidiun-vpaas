@@ -8,7 +8,7 @@ var vpaasAppModule = 'vauApp';
 
 module.exports = function (grunt) {
 
-    var vendors = require('./clients/kau-account-usage/vendors-references');
+    var vendors = require('./clients/vau-account-usage/vendors-references');
     var packageConfig = grunt.file.readJSON('./package.json');
     var buildConfig = grunt.file.readJSON('./build/build-config.json');
 
@@ -18,7 +18,7 @@ module.exports = function (grunt) {
         // Project settings
         project: {
             // Configurable paths
-            app: 'clients/kau-account-usage',
+            app: 'clients/vau-account-usage',
             infra: 'clients/ka-infra',
             config: '<%= project.app %>/config',
             assets: '<%= project.app %>/assets',
@@ -66,7 +66,7 @@ module.exports = function (grunt) {
                     spawn: false
                 },
                 files: ['<%= project.app %>/src/**/*.js', '<%= project.infra %>/**/*.js'],
-                tasks: ['jshint', 'kan-app-scripts:all-env-app']
+                tasks: ['jshint', 'van-app-scripts:all-env-app']
             },
             'env-dev-spec': {
                 options: {
@@ -89,7 +89,7 @@ module.exports = function (grunt) {
             },
             'env-dev-scss': {
                 files: ['<%= project.assets %>/**/*.scss'],
-                tasks: ['kan-app-styles:all-env']
+                tasks: ['van-app-styles:all-env']
 
             },
             'env-dev-assets': {
@@ -195,14 +195,14 @@ module.exports = function (grunt) {
             }
         },
 
-        'kan-app-styles': {
+        'van-app-styles': {
             'all-env': {
                 files: {
                     '<%= project.temp %>/assets/main.css': '<%= project.assets %>/sass/main.scss'
                 }
             }
         },
-        'kan-app-scripts': {
+        'van-app-scripts': {
             'all-env-app': {
                 options: {
                     debug: false,
@@ -211,7 +211,7 @@ module.exports = function (grunt) {
                     }
                 },
                 files: {
-                    '.tmp/app.js': ['./<%= project.app %>/src/kau-app/index.js']
+                    '.tmp/app.js': ['./<%= project.app %>/src/vau-app/index.js']
                 }
             },
             'all-env-vendors': {
@@ -381,7 +381,7 @@ module.exports = function (grunt) {
 
         var tasks = [];
 
-        addEnvTasks(tasks, ['jshint', 'clean', 'kan-app-scripts', 'kan-app-styles'], envTaskId);
+        addEnvTasks(tasks, ['jshint', 'clean', 'van-app-scripts', 'van-app-styles'], envTaskId);
 
         addEnvTasks(tasks, ['ngtemplates', 'dom_munger', 'concat', 'copy','cachebreaker', 'zip'], envTaskId);
 

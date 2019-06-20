@@ -41,7 +41,7 @@ module.exports = function()
         require: ['vauStatusSection','^vauReport'],
         controllerAs:'vm',
         bindToController : true,
-templateUrl: 'kau-reports/directives/sections/kau-status-section.html',
+templateUrl: 'vau-reports/directives/sections/vau-status-section.html',
         controller: Controller,
         link:Link
     };

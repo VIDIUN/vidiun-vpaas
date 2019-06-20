@@ -1,7 +1,7 @@
 
-.kan-samples {
+.van-samples {
 
-    .kan-map-container {
+    .van-map-container {
         position:relative;
         height:460px;
 
@@ -44,7 +44,7 @@
         }
     }
 
-    .kan-json-code
+    .van-json-code
     {
         max-height:300px;
     }
@@ -54,14 +54,14 @@
         margin-bottom:30px;
     }
 
-    .kan-no-data
+    .van-no-data
     {
         color:darkred;
         text-align: center;
         font-weight: bold;
     }
 
-    .kan-sample-description
+    .van-sample-description
     {
         color: gray;
     }
@@ -71,18 +71,18 @@
         margin-left:10px;
     }
 
-    .kan-alert-brief
+    .van-alert-brief
     {
        @include active-panel();
     }
 
-    .kan-filter-form
+    .van-filter-form
     {
         border: solid 1px lightgray;
         background:#F5F5F6;
         padding:10px;
 
-        .kan-title
+        .van-title
         {
             font-weight: bolder;
 
@@ -95,7 +95,7 @@
         }
     }
 
-    .kan-samples-sidebar .nav>li>a
+    .van-samples-sidebar .nav>li>a
     {
         display: block;
         padding: 4px 20px;
@@ -104,7 +104,7 @@
         color: #767676;
     }
 
-    .kan-samples-sidebar .nav > .active:focus > a, .kan-samples-sidebar .nav > .active:hover > a, .kan-samples-sidebar .nav > .active > a {
+    .van-samples-sidebar .nav > .active:focus > a, .van-samples-sidebar .nav > .active:hover > a, .van-samples-sidebar .nav > .active > a {
 
         font-weight: 700;
         color: $active-color;
@@ -112,7 +112,7 @@
         border-left: 2px solid $active-color ;
     }
 
-    .kan-samples-sidebar .nav > li > a {
+    .van-samples-sidebar .nav > li > a {
         display: block;
         padding: 4px 20px;
         font-size: 13px;
@@ -121,7 +121,7 @@
     }
 
 
-    .kan-samples-sidebar .nav .nav>li>a
+    .van-samples-sidebar .nav .nav>li>a
     {
         padding-top: 1px;
         padding-bottom: 1px;

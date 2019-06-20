@@ -162,7 +162,7 @@ module.exports = function()
         restrict : 'A',
         scope : {},
         link : link,
-templateUrl: 'kau-reports/directives/kau-report.html',
+templateUrl: 'vau-reports/directives/vau-report.html',
         controller: controller,
         controllerAs : 'vm'
     }

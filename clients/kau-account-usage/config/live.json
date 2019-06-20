@@ -8,7 +8,7 @@
     },
     "debug" :{
         "enabled" : true,
-        "kau-app" : {
+        "vau-app" : {
             "reportDiagnostic" : true
         }
     }

@@ -43,18 +43,18 @@ module.exports = function ($stateProvider, $urlRouterProvider, $httpProvider, $p
     $stateProvider.state('root.shell', {
         url: '',
         abstract:true,
-templateUrl: 'kau-app/partials/kau-shell.html'
+templateUrl: 'vau-app/partials/vau-shell.html'
     });
 
     $stateProvider.state('root.shell.reports', {
         url: '/reports',
         abstract:true,
-templateUrl: 'kau-app/partials/kau-reports.html'
+templateUrl: 'vau-app/partials/vau-reports.html'
     });
 
     $stateProvider.state('root.shell.reports.report', {
         url: '/{reportId}',
-templateUrl: 'kau-app/partials/kau-report.html',
+templateUrl: 'vau-app/partials/vau-report.html',
         controller : 'vauReport',
         controllerAs : 'vm'
     });

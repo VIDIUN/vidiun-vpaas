@@ -151,7 +151,7 @@ module.exports = function()
         require: ['vauBarChartSection','^vauReport'],
         controllerAs:'vm',
         bindToController : true,
-templateUrl: 'kau-reports/directives/sections/kau-bar-chart-section.html',
+templateUrl: 'vau-reports/directives/sections/vau-bar-chart-section.html',
         controller: Controller,
         link:Link
     };

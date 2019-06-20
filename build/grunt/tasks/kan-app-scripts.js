@@ -30,8 +30,8 @@ module.exports = function (grunt) {
 
         browserifyConfig.options.ignore = ['angular','jquery','moment'];
 
-        grunt.config.set('browserify.kan-app-scripts', browserifyConfig);
-        grunt.task.run(['browserify:kan-app-scripts']);
+        grunt.config.set('browserify.van-app-scripts', browserifyConfig);
+        grunt.task.run(['browserify:van-app-scripts']);
     }
 
     function validateOptions(options)
@@ -63,7 +63,7 @@ module.exports = function (grunt) {
 
     }
 
-    grunt.registerMultiTask('kan-app-scripts', 'Bundle app and vendor scripts separately', function () {
+    grunt.registerMultiTask('van-app-scripts', 'Bundle app and vendor scripts separately', function () {
 
         var options = this.options({
             debug: true,
@@ -86,12 +86,12 @@ module.exports = function (grunt) {
                 grunt.fatal('option "globals" is supported when has only one destination file');
             }
             var destFile = this.files[0].dest;
-            grunt.config.set('concat.kan-app-scripts', {
+            grunt.config.set('concat.van-app-scripts', {
                 src: [options.globals,destFile],
                 dest: destFile,
             });
 
-            grunt.task.run(['concat:kan-app-scripts']);
+            grunt.task.run(['concat:van-app-scripts']);
         }
 
     });
